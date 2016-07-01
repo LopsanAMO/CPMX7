@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from django.views.generic import View
 from .send import mensajes
+from django.views.decorators.csrf import csrf_exempt
+from django.http import HttpResponse
 
 # Create your views here.
 
@@ -24,8 +26,10 @@ class Home(View):
         template_name = 'index.html'
         return render(request, template_name)
 
+    @csrf_exempt
     def post(request):
         if request.method == 'POST':
             content = request.POST.get('body')
             print('-------------')
             print(content)
+            return HttpResponse(content)
