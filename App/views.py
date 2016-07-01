@@ -27,6 +27,7 @@ class Enviar(View):
 
 
 def send_form(query):
+	params = { "hitsPerPage": 5 }
 	json_data = raw_search(Trabajo, query, params)
 	json_array = json_data["hits"]
 	for x in range(0,4):
@@ -50,7 +51,7 @@ class Home(View):
 		contenido = str(content)
 		msg1 = 'estas bien rica'
 		msg2 = 'no estas bien rica'
-		params = { "hitsPerPage": 5 }
+		
 		send_form(contenido)
 		
 		return HttpResponse(request,content)
