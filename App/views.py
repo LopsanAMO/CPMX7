@@ -39,9 +39,9 @@ class Home(View):
 		params = { "hitsPerPage": 5 }
 		some_shit = raw_search(Trabajo, contenido, params)
 		json_data = json.load(some_shit)
-		job_name = json_data['hits']['profesion']
-		job_phone = json_data['hits']['telefono']
-		job_money = (json_data['hits']['pagoHora']) * 8 * 20
+		job_name = json_data['hits'][0]['profesion']
+		job_phone = json_data['hits'][0]['telefono']
+		job_money = (json_data['hits'][0]['pagoHora']) * 8 * 20
 
 		print(job_money + job_phone + job_money)
 		contenido = contenido.split(' ')
