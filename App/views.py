@@ -40,7 +40,7 @@ class Home(View):
 		json_data = raw_search(Trabajo, contenido, params)
 		
 		job_name = json_data["hits"]
-		print(job_money)
+		print(job_name)
 		job_phone = json_data["hits"][0]["telefono"]
 		job_money = (json_data["hits"][0]["pagoHora"]) * 8 * 20
 
