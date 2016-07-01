@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.views.generic import View
 from .send import mensajes
 from django.http import HttpResponse
+from .models import Trabajo
 
 # Create your views here.
 
@@ -33,6 +34,15 @@ class Home(View):
         msg2 = 'no estas bien rica'
         if contenido[0] == 'TRABAJO':
             mensajes(msg1)
+            #try:
+            #    trabajos = Trabajo.objects.get(colonia=contenido[1])
+            #except:
+            #    try:
+            #        trabajos = Trabajo.objects.get(delegacionMunicipio=contenido[1])
+            #    except:
+            #        try:
+            #            trabajos = Trabajo.objects.get(estado=contenido[1])
+            #        except:
         else:
             mensajes(msg2)
         print(contenido)
