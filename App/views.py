@@ -27,7 +27,7 @@ class Enviar(View):
 
 
 def send_form(query):
-	json_data = raw_search(Trabajo, contenido, params)
+	json_data = raw_search(Trabajo, query, params)
 	json_array = json_data["hits"]
 	for x in range(0,4):
 		if(len(json_array) == 0 and x == 0):
