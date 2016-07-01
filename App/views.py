@@ -41,8 +41,7 @@ class Home(View):
 		job_name = json_data["hits"][0]["profesion"]
 		job_phone = json_data["hits"][0]["telefono"]
 		job_money = int((json_data["hits"][0]["pagoHora"])) * 8 * 20
-		job_message = "Recibimos tu búsquda y tenemos estos trabajos para ti. Trabajo: " 
-		job_message += job_name +  " Telefono: " + job_phone + " Salario: " + str(job_money)
+		job_message = "Recibimos tu búsquda y tenemos estos trabajos para ti. Trabajo: " + job_name +  " Telefono: " + job_phone + " Salario: " + str(job_money)
 		mensajes(job_message)
 		
 		return HttpResponse(request,content)
