@@ -54,6 +54,7 @@ class Trabajo(models.Model):
         ('VER', 'Veracruz'), ('YUC', 'Yucatán'),
         ('ZAC', 'Zacatecas')})
 
+
     #atributos
     profesion = models.CharField(max_length=50, null=False, blank=False)
     descripcion = models.CharField(max_length=250, null=False, blank=False)

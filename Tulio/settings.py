@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'App',
     'django_twilio',
+    'django.contrib.algoliasearch'
 ]
 
 MIDDLEWARE_CLASSES = [
