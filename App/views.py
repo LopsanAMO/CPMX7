@@ -31,7 +31,7 @@ class Home(View):
         contenido = contenido.split(' ')
         msg1 = 'estas bien rica'
         msg2 = 'no estas bien rica'
-        if contenido.get(0) == 'TRABAJO':
+        if contenido[0] == 'TRABAJO':
             mensajes(msg1)
         else:
             mensajes(msg2)
