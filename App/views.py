@@ -3,6 +3,7 @@ from django.views.generic import View
 from django.http import HttpResponse
 
 from django.contrib.algoliasearch import raw_search
+import json
 
 from .models import Trabajo
 from .send import mensajes
@@ -37,7 +38,12 @@ class Home(View):
 		msg2 = 'no estas bien rica'
 		params = { "hitsPerPage": 5 }
 		some_shit = raw_search(Trabajo, contenido, params)
-		print(some_shit)
+		json_data = json.load(some_shit)
+		job_name = json_data['hits']['profesion']
+		job_phone = json_data['hits']['telefono']
+		job_money = (json_data['hits']['pagoHora']) * 8 * 20
+
+		print(job_money + job_phone + job_money)
 		contenido = contenido.split(' ')
 		if contenido[0] == 'TRABAJO':
 			mensajes(msg1)
