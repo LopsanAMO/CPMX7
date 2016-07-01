@@ -41,20 +41,6 @@ class Home(View):
 		job_name = json_data["hits"][0]["profesion"]
 		job_phone = json_data["hits"][0]["telefono"]
 		job_money = int((json_data["hits"][0]["pagoHora"])) * 8 * 20
-		print("trabajo: " + job_name +  "telefono: " + job_phone + "money: " + str(job_money))
-		contenido = contenido.split(' ')
-		if contenido[0] == 'TRABAJO':
-			mensajes(msg1)
-			#try:
-			#    trabajos = Trabajo.objects.get(colonia=contenido[1])
-			#except:
-			#    try:
-			#        trabajos = Trabajo.objects.get(delegacionMunicipio=contenido[1])
-			#    except:
-			#        try:
-			#            trabajos = Trabajo.objects.get(estado=contenido[1])
-			#        except:
-		else:
-			mensajes(msg2)
-		print(contenido)
+		mensajes("trabajo: " + job_name +  "telefono: " + job_phone + "money: " + str(job_money))
+		
 		return HttpResponse(request,content)
