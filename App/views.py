@@ -30,7 +30,7 @@ def send_form(query):
 	json_data = raw_search(Trabajo, contenido, params)
 	json_array = json_data["hits"]
 	for x in range(0,4):
-		if(len(json_array) == 0 && x == 0):
+		if(len(json_array) == 0 and x == 0):
 			mensajes("No encontramos trabajos para ti :c intenta mas tarde c:")
 			break
 		if(len(json_array) > x):
