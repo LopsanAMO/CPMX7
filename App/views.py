@@ -29,5 +29,11 @@ class Home(View):
         content = request.POST.get('Body')
         contenido = str(content)
         contenido = contenido.split(' ')
+        msg1 = 'estas bien rica'
+        msg2 = 'no estas bien rica'
+        if contenido[0] == 'TRABAJO':
+            mensajes(msg1)
+        else:
+            mensajes(msg2)
         print(contenido)
         return HttpResponse(request,content)
