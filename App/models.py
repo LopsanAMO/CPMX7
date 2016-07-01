@@ -16,7 +16,6 @@ class Trabajo(models.Model):
 	#atributos
 	profesion = models.CharField(max_length=50, null=False, blank=False)
     descripcion = models.CharField(max_length=250, null=False, blank=False)
-	ubicacion = models.CharField(max_length=100, null=False, blank=False)
 	fecha = models.DateTimeField(null=False, blank=False)
 	pagoHora = models.CharField(null=False, blank=False)
 	duracionHora = models.IntegerField(null=False, blank=False)
@@ -26,6 +25,7 @@ class Trabajo(models.Model):
 	delegacionMunicipio = models.CharField(max_length=120, null=False, blank=False)
     estado = models.CharField(max_length=50, null=False, blank=False)
 	tipoLugar = models.CharField(max_length=120, null=False, blank=False)
+	telefono = models.CharField(max_length=16)
 
         def __str__(self):
             return self.descripcion
