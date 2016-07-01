@@ -37,8 +37,8 @@ class Home(View):
 		msg1 = 'estas bien rica'
 		msg2 = 'no estas bien rica'
 		params = { "hitsPerPage": 5 }
-		some_shit = raw_search(Trabajo, contenido, params)
-		json_data = json.load(some_shit)
+		json_data = raw_search(Trabajo, contenido, params)
+		
 		job_name = json_data['hits'][0]['profesion']
 		job_phone = json_data['hits'][0]['telefono']
 		job_money = (json_data['hits'][0]['pagoHora']) * 8 * 20
