@@ -33,16 +33,14 @@ class Home(View):
 	def post(self,request):
 		content = request.POST.get('Body')
 		contenido = str(content)
-		print('contenido: ' + contenido)
 		msg1 = 'estas bien rica'
 		msg2 = 'no estas bien rica'
 		params = { "hitsPerPage": 5 }
 		json_data = raw_search(Trabajo, contenido, params)
 		
-		job_name = json_data["hits"]
-		print(job_name)
+		job_name = json_data["hits"][0]["profesion"]
 		job_phone = json_data["hits"][0]["telefono"]
-		job_money = (json_data["hits"][0]["pagoHora"]) * 8 * 20
+		job_money = int((json_data["hits"][0]["pagoHora"])) * 8 * 20
 
 		print(job_money + job_phone + job_money)
 		contenido = contenido.split(' ')
