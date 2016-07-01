@@ -1,0 +1,135 @@
+[
+{
+  "model": "App.trabajo",
+  "pk": 3,
+  "fields": {
+    "profesion": "Carpintero",
+    "descripcion": "Carpintero con experiencia minima de 4 a\u00f1os",
+    "ubicacion": "mi casa",
+    "fecha": "2016-07-01T14:23:29Z",
+    "pagoHora": "85",
+    "duracionHora": 5,
+    "telefono": "5569626896",
+    "calle": "Pitagoras",
+    "numero": "144",
+    "colonia": "Narvarte",
+    "delegacionMunicipio": "COL",
+    "estado": "MOR",
+    "tipoLugar": "Casa/Habitacion"
+  }
+},
+{
+  "model": "App.trabajo",
+  "pk": 4,
+  "fields": {
+    "profesion": "Barrendero",
+    "descripcion": "Barrendero",
+    "ubicacion": "Por Polanco",
+    "fecha": "2016-07-01T14:26:19Z",
+    "pagoHora": "100",
+    "duracionHora": 5,
+    "telefono": "5541526374",
+    "calle": "Navojoa",
+    "numero": "14",
+    "colonia": "Guerrero",
+    "delegacionMunicipio": "AGU",
+    "estado": "JAL",
+    "tipoLugar": "Empresa"
+  }
+},
+{
+  "model": "App.trabajo",
+  "pk": 5,
+  "fields": {
+    "profesion": "Carpintero",
+    "descripcion": "Necesito que corten mucha madera",
+    "ubicacion": "cercana",
+    "fecha": "2016-07-01T14:29:07Z",
+    "pagoHora": "150",
+    "duracionHora": 5,
+    "telefono": "5541881044",
+    "calle": "Mocorito",
+    "numero": "45",
+    "colonia": "Polanco",
+    "delegacionMunicipio": "MOR",
+    "estado": "MEX",
+    "tipoLugar": "Casa"
+  }
+},
+{
+  "model": "App.trabajo",
+  "pk": 6,
+  "fields": {
+    "profesion": "Alba\u00f1il",
+    "descripcion": "Necesito a un alba\u00f1il que termine una obra inconclusa",
+    "ubicacion": "por Cafetales",
+    "fecha": "2016-07-01T14:31:22Z",
+    "pagoHora": "200",
+    "duracionHora": 8,
+    "telefono": "5531111857",
+    "calle": "Casta\u00f1os",
+    "numero": "2",
+    "colonia": "Bosques",
+    "delegacionMunicipio": "HID",
+    "estado": "MIC",
+    "tipoLugar": "Casa"
+  }
+},
+{
+  "model": "App.trabajo",
+  "pk": 7,
+  "fields": {
+    "profesion": "Plomero",
+    "descripcion": "Se tapo el ca\u00f1o de mi casa",
+    "ubicacion": "Por definir",
+    "fecha": "2016-07-01T14:32:44Z",
+    "pagoHora": "300",
+    "duracionHora": 2,
+    "telefono": "5567045272",
+    "calle": "Cajeme",
+    "numero": "13",
+    "colonia": "Alvaro",
+    "delegacionMunicipio": "AGU",
+    "estado": "MEX",
+    "tipoLugar": "Casa"
+  }
+},
+{
+  "model": "App.trabajo",
+  "pk": 8,
+  "fields": {
+    "profesion": "Zapatero",
+    "descripcion": "Zapatero de tiempo completo",
+    "ubicacion": "por definir",
+    "fecha": "2016-07-01T14:35:17Z",
+    "pagoHora": "450",
+    "duracionHora": 4,
+    "telefono": "4455221122",
+    "calle": "Cafetales",
+    "numero": "12",
+    "colonia": "Polanco",
+    "delegacionMunicipio": "AGU",
+    "estado": "JAL",
+    "tipoLugar": "Casa"
+  }
+},
+{
+  "model": "App.trabajo",
+  "pk": 9,
+  "fields": {
+    "profesion": "Zapatero",
+    "descripcion": "por definir",
+    "ubicacion": "por definir",
+    "fecha": "2016-07-01T14:42:15Z",
+    "pagoHora": "12345",
+    "duracionHora": 5,
+    "telefono": "5555555555",
+    "calle": "Pitagoras",
+    "numero": "45",
+    "colonia": "Polanco",
+    "delegacionMunicipio": "BCN",
+    "estado": "BCN",
+    "tipoLugar": "Casa"
+  }
+}
+]
