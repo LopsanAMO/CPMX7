@@ -25,6 +25,22 @@ class Enviar(View):
 		except:
 			return render(request, template_error)
 
+
+def send_form(query):
+	params = { "hitsPerPage": 5 }
+	json_data = raw_search(Trabajo, query, params)
+	json_array = json_data["hits"]
+	for x in range(0,4):
+		if(len(json_array) == 0 and x == 0):
+			mensajes("No encontramos trabajos para ti :c intenta mas tarde c:")
+			break
+		if(len(json_array) > x):
+			job_name = json_array[x]["profesion"]
+			job_phone = json_array[x]["telefono"]
+			job_money = int((json_array[x]["pagoHora"])) * 8 * 20
+			job_message = "Trabajo: " + job_name +  " Telefono: " + job_phone + " Salario: " + str(job_money)
+			mensajes(job_message)	
+
 class Home(View):
 	def get(self, request):
 		template_name = 'index.html'
@@ -32,15 +48,7 @@ class Home(View):
 
 	def post(self,request):
 		content = request.POST.get('Body')
-		contenido = str(content)
-		msg1 = 'estas bien rica'
-		msg2 = 'no estas bien rica'
-		params = { "hitsPerPage": 5 }
-		json_data = raw_search(Trabajo, contenido, params)
-		
-		job_name = json_data["hits"][0]["profesion"]
-		job_phone = json_data["hits"][0]["telefono"]
-		job_money = int((json_data["hits"][0]["pagoHora"])) * 8 * 20
-		mensajes("trabajo: " + job_name +  "telefono: " + job_phone + "money: " + str(job_money))
+		contenido = str(content)		
+		send_form(contenido)
 		
 		return HttpResponse(request,content)
