@@ -57,18 +57,7 @@ class Trabajo(models.Model):
     #atributos
     profesion = models.CharField(max_length=50, null=False, blank=False)
     descripcion = models.CharField(max_length=250, null=False, blank=False)
-<<<<<<< HEAD
-	fecha = models.DateTimeField(null=False, blank=False)
-	pagoHora = models.CharField(null=False, blank=False)
-	duracionHora = models.IntegerField(null=False, blank=False)
-    calle = models.CharField(max_length=120, null=False, blank=False)
-	numero = models.CharField(max_length=10, null=False, blank=False)
-	colonia = models.CharField(max_length=200, null=False, blank=False)
-	delegacionMunicipio = models.CharField(max_length=120, null=False, blank=False)
-    estado = models.CharField(max_length=50, null=False, blank=False)
-	tipoLugar = models.CharField(max_length=120, null=False, blank=False)
-	telefono = models.CharField(max_length=16)
-=======
+
     ubicacion = models.CharField(max_length=100, null=False, blank=False)
     fecha = models.DateTimeField(null=False, blank=False)
     pagoHora = models.CharField(max_length=50,null=False, blank=False)
@@ -79,7 +68,7 @@ class Trabajo(models.Model):
     delegacionMunicipio = models.CharField(max_length=50,choices=DELEGACION_CHOICES,  null=True, blank=True)
     estado = models.CharField(max_length=50,choices=STATE_CHOICES,  null=True, blank=True)
     tipoLugar = models.CharField(max_length=120, null=False, blank=False)
->>>>>>> 3146b49ac87e721bd944bfc2b48220fb8d442333
+
 
     def __str__(self):
         return self.descripcion
