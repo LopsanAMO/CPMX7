@@ -18,3 +18,14 @@ class Enviar(View):
             return render(request, template_name)
         except:
             return render(request, template_error)
+
+class Home(View):
+    def get(self, request):
+        template_name = 'index.html'
+        return render(request, template_name)
+
+    def post(request):
+        if request.method == 'POST':
+            content = request.POST.get('body')
+            print('-------------')
+            print(content)
