@@ -38,7 +38,7 @@ class Home(View):
 		params = { "hitsPerPage": 5 }
 		json_data = raw_search(Trabajo, contenido, params)
 		json_array = json_data["hits"]
-		for x in xrange(0,4):
+		for x in range(0,4):
 			if(len(json_array) > x):
 				job_name = json_array[x]["profesion"]
 				job_phone = json_array[x]["telefono"]
