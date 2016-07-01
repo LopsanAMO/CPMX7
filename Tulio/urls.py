@@ -6,5 +6,6 @@ from App.views import Home
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^hola/', include(gfa)),
-    url(r'^', Home.as_view())
+    url(r'^',
+        include('main.urls', namespace="main")),
 ]
