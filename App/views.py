@@ -42,7 +42,7 @@ class Home(View):
 		job_phone = json_data["hits"][0]["telefono"]
 		job_money = int((json_data["hits"][0]["pagoHora"])) * 8 * 20
 
-		print(str(job_money) + job_phone + job_money)
+		print(job_name + job_phone + str(job_money))
 		contenido = contenido.split(' ')
 		if contenido[0] == 'TRABAJO':
 			mensajes(msg1)
