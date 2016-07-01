@@ -27,5 +27,7 @@ class Home(View):
 
     def post(self,request):
         content = request.POST.get('Body')
-        print(content)
+        contenido = str(content)
+        contenido = contenido.split(' ')
+        print(contenido)
         return HttpResponse(request,content)
