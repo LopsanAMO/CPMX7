@@ -37,11 +37,15 @@ class Home(View):
 		msg2 = 'no estas bien rica'
 		params = { "hitsPerPage": 5 }
 		json_data = raw_search(Trabajo, contenido, params)
+		json_array = json_data["hits"]
+		for x in xrange(0,4):
+			if(len(json_array) > x):
+				job_name = json_array[x]["profesion"]
+				job_phone = json_array[x]["telefono"]
+				job_money = int((json_array[x]["pagoHora"])) * 8 * 20
+				job_message = "Trabajo: " + job_name +  " Telefono: " + job_phone + " Salario: " + str(job_money)
+				mensajes(job_message)
+
 		
-		job_name = json_data["hits"][0]["profesion"]
-		job_phone = json_data["hits"][0]["telefono"]
-		job_money = int((json_data["hits"][0]["pagoHora"])) * 8 * 20
-		job_message = "Trabajos para ti: " + job_name +  " Telefono: " + job_phone + " Salario: " + str(job_money)
-		mensajes(job_message)
 		
 		return HttpResponse(request,content)
