@@ -39,7 +39,7 @@ class Home(View):
 		params = { "hitsPerPage": 5 }
 		json_data = raw_search(Trabajo, contenido, params)
 		
-		job_name = json_data["hits"][0]["profesion"]
+		job_name = json_data["hits"][0]
 		job_phone = json_data["hits"][0]["telefono"]
 		job_money = (json_data["hits"][0]["pagoHora"]) * 8 * 20
 
