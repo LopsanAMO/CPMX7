@@ -28,6 +28,8 @@ INSTALLED_APPS = [
     'App',
     'django_twilio',
     'main',
+    'django.contrib.algoliasearch',
+    'account'
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -114,3 +116,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 CSRF_COOKIE_SECURE = False
+ALGOLIA = {
+    'APPLICATION_ID': "PMQJR00AII",
+    'API_KEY': "fef5e770622372796dc3deb764532f21"
+}

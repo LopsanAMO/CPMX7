@@ -55,10 +55,10 @@
 					<nav id="primary-menu">
 						<ul>
 							<li>
-								<a href="#"><div>Inicio</div></a>
+								<a href="{%url 'main:index'%}"><div>Inicio</div></a>
 							</li>
-								<li><a href="#"><div>Busca Empleo</div></a></li>
-								<li><a href="#"><div>Ofrece Empleo</div></a></li>
+								<li><a href="{%url 'main:jobs'%}"><div>Busca Empleo</div></a></li>
+								<li><a href="{%url 'main:ofertas'%}"><div>Ofrece Empleo</div></a></li>
 
 
 							{% if user.is_authenticated %}
@@ -68,7 +68,7 @@
 										</ul>
 									</li>
 							{%else%}
-									<li><a href="#"><div>Inicia Sesion</div></a></li>
+									<li><a href="{%url 'account:login'%}"><div>Inicia Sesion</div></a></li>
 							{% endif %}
 
 						</li>

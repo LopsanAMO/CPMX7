@@ -7,7 +7,6 @@ class Empleadore(models.Model):
     edad = models.IntegerField()
     trabajo = models.CharField(max_length=120)
     correo = models.CharField(max_length=120)
-    imagen = models.ImageField(upload_to="imagenesPerfilEmpleadores")
 
     def __str__(self):
         return self.nombres
@@ -54,6 +53,7 @@ class Trabajo(models.Model):
         ('VER', 'Veracruz'), ('YUC', 'Yucatán'),
         ('ZAC', 'Zacatecas')})
 
+
     #atributos
     profesion = models.CharField(max_length=50, null=False, blank=False)
     descripcion = models.CharField(max_length=250, null=False, blank=False)
@@ -61,6 +61,7 @@ class Trabajo(models.Model):
     fecha = models.DateTimeField(null=False, blank=False)
     pagoHora = models.CharField(max_length=50,null=False, blank=False)
     duracionHora = models.IntegerField(null=False, blank=False)
+    telefono = models.CharField(max_length=16, null=False, blank=False)
     calle = models.CharField(max_length=120, null=False, blank=False)
     numero = models.CharField(max_length=10, null=False, blank=False)
     colonia = models.CharField(max_length=200, null=False, blank=False)

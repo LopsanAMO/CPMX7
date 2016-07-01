@@ -8,4 +8,6 @@ urlpatterns = [
     url(r'^hola/', include(gfa)),
     url(r'^',
         include('main.urls', namespace="main")),
+    url(r'^',
+        include('account.urls', namespace="account")),
 ]

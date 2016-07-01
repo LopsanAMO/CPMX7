@@ -8,3 +8,7 @@ class indexView(TemplateView):
 
 class jobsView(TemplateView):
     template_name = 'main/jobs.html'
+
+
+class ofreceView(TemplateView):
+        template_name = 'main/ofrece.html'
